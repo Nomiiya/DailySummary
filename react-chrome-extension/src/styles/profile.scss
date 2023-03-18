@@ -1,0 +1,27 @@
+@use "./globals.scss" as global;
+
+.profile-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    border: solid 1px black;
+}
+
+.profile-header{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: global.$global-text;
+}
+
+@media screen and (min-width: 769px){}
+@media screen and (min-width: 600px) and (max-width: 768px) {}
+@media screen and (max-width: 600px) {}
