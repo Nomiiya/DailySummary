@@ -1,5 +1,5 @@
 import React,  {useState } from "react";
-import  SignUpForm  from "../hooks/signuphook"
+import  FormEventHook  from "../hooks/formeventhook"
 import { supabase } from "../lib/supabaseClient";
 
 const SignUp = () => {
@@ -9,7 +9,7 @@ const SignUp = () => {
         displayName: ""
     };
 
-    const {onChange, onSubmit, values} = SignUpForm(signupUserCallback, initialState);
+    const {onChange, onSubmit, values} = FormEventHook(signupUserCallback, initialState);
 
     async function signupUserCallback(){
         const { data, error } = await supabase.auth.signUp({

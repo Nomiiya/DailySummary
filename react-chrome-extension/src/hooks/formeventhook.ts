@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SignUpForm = (callback: any, initialState = {}) =>  {
+const FormEventHook = (callback: any, initialState = {}) =>  {
     const [values, setValues] = useState(initialState);
     
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,4 +20,4 @@ const SignUpForm = (callback: any, initialState = {}) =>  {
     };
 };
 
-export default SignUpForm;
+export default FormEventHook;
