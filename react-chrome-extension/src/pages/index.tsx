@@ -5,9 +5,15 @@ import styles from '@/styles/Home.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
+import { selectAuthState, setAuthState } from '../../store/authSlice'
+import { useDispatch, useSelector } from 'react-redux'
+
 import Sidenav from './components/sidenav/sidenav'
 
 export default function Home() {
+  const authState = useSelector(selectAuthState);
+  const dispatch = useDispatch();
+
   return (
     <>
       <Head>
@@ -18,6 +24,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
           <Sidenav />
+          <div> {authState ? "Logged In" : "Not Logged in"} </div>
       </main>
     </>
   )

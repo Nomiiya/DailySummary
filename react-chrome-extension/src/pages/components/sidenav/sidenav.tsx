@@ -4,7 +4,7 @@ function Sidenav(){
     return(
         <div className="sidenav-wrapper">
             <Userprofile />
-            <div>a</div>
+            <div></div>
             <div>b</div>
             <div>c</div>
         </div>
