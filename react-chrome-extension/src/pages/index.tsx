@@ -5,10 +5,10 @@ import styles from '@/styles/Home.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
-import { selectAuthState, setAuthState } from '../../store/authSlice'
+import { selectAuthState, setAuthState } from '../store/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
-import Sidenav from './components/sidenav/sidenav'
+import Sidenav from '../components/sidenav'
 
 export default function Home() {
   const authState = useSelector(selectAuthState);

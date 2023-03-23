@@ -1,4 +1,4 @@
-import { supabase } from '../../../lib/supabaseClient';
+import { supabase } from '../lib/supabaseClient';
 import React from 'react';
 
 function Page({users}:any) {

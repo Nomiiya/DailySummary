@@ -19,4 +19,4 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   Action
 >;
 
-export const wrapper = createWrapper<AppStore>(makeStore);
+export const wrapper = createWrapper<AppStore>(makeStore, {debug: false});

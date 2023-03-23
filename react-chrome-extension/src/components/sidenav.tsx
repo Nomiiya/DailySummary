@@ -1,4 +1,4 @@
-import Userprofile from "../profile";
+import Userprofile from "./profile";
 
 function Sidenav(){
     return(
