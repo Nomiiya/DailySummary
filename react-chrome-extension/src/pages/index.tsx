@@ -5,15 +5,14 @@ import styles from '@/styles/Home.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
-import { selectAuthState, setAuthState } from '../store/authSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { selectAuthState, setAuthState } from '@/store/authSlice'
+import { wrapper } from '@/store/authStore'
+import { useSelector } from 'react-redux'
 
 import Sidenav from '../components/sidenav'
 
 export default function Home() {
   const authState = useSelector(selectAuthState);
-  const dispatch = useDispatch();
-
   return (
     <>
       <Head>
@@ -29,3 +28,16 @@ export default function Home() {
     </>
   )
 }
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async ({ params }) => {
+      await store.dispatch(setAuthState(false)); 
+      console.log("State on server", store.getState());
+      return {
+        props: {
+          authState: false,
+        },
+      };
+    }
+);
