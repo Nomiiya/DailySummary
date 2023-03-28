@@ -10,6 +10,7 @@ const makeConfiguredStore = () =>
     reducer: rootReducer,
     devTools: true,
   });
+  
 export const makeStore = () => {
   const isServer = typeof window === "undefined";
   if (isServer) {

@@ -9,7 +9,7 @@ import { selectAuthState, setAuthState } from '@/store/authSlice'
 import { wrapper } from '@/store/authStore'
 import { useSelector } from 'react-redux'
 
-import Sidenav from '../components/sidenav'
+import Sidenav from '../components/LandingPage/Sidenav/sidenav'
 
 export default function Home() {
   const authState = useSelector(selectAuthState);

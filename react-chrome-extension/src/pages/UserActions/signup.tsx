@@ -1,4 +1,4 @@
-import SignUpForm from "../components/signupform";
+import SignUpForm from '../../components/SignupPage/signupform'
 import Link from "next/link"
 
 const SignUpPage = () => {

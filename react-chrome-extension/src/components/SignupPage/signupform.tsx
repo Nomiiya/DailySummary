@@ -1,6 +1,6 @@
 import React,  {useState } from "react";
-import  FormEventHook  from "../hooks/formeventhook"
-import { supabase } from "../lib/supabaseClient";
+import  FormEventHook  from "../../hooks/formeventhook"
+import { supabase } from "../../lib/supabaseClient";
 
 const SignUp = () => {
     const initialState = {
